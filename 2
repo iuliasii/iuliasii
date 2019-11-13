@@ -1,0 +1,131 @@
+<!DOCTYPE html> 
+
+<html> 
+
+<head> 
+
+<title>Page Title</title> 
+
+</head> 
+
+<style> 
+
+body { 
+
+  background-color: lightblue; 
+
+} 
+
+h1 { 
+
+  font-family: verdana; 
+
+  color: black; 
+
+  text-align: center; 
+
+} 
+
+p { 
+
+  font-weight: bold; 
+
+} 
+
+</style> 
+
+<body> 
+
+<h1 id="myh1">Catalog</h1> 
+
+<h1 id="myh2">Grupa 2117-Descrieri</h1> 
+
+<p><a href="https://www.w3schools.com/code/tryit.asp?filename=G9GG5KJ5U0PA">Maris Ana-Maria</a></p> 
+
+<p><a href="https://www.w3schools.com/code/tryit.asp?filename=G9GGE5QS4TW7">Manciu Larisa</a></p> 
+
+<p><a href="https://www.w3schools.com/code/tryit.asp?filename=G9GGFMMCMKIU">Maries Stefania</a></p> 
+
+<p><a href="https://www.w3schools.com/code/tryit.asp?filename=G9GGH5MKHILJ">Stanciu Iulia</a></p> 
+
+<button type="button" onclick="myFunction()">Alta viata!</button> 
+
+  
+
+  
+
+<script> 
+
+function myFunction() { 
+
+  document.body.style.backgroundColor = "lightgreen"; 
+
+  document.getElementById("myh1").style.color = "#ff0000"; 
+
+  document.getElementById("myh2").style.color = "#ff0000"; 
+
+} 
+
+  
+
+var slideIndex = 1; 
+
+showSlides(slideIndex); 
+
+  
+
+// Next/previous controls 
+
+function plusSlides(n) { 
+
+  showSlides(slideIndex += n); 
+
+} 
+
+  
+
+// Thumbnail image controls 
+
+function currentSlide(n) { 
+
+  showSlides(slideIndex = n); 
+
+} 
+
+  
+
+function showSlides(n) { 
+
+  var i; 
+
+  var slides = document.getElementsByClassName("mySlides"); 
+
+  var dots = document.getElementsByClassName("dot"); 
+
+  if (n > slides.length) {slideIndex = 1} 
+
+  if (n < 1) {slideIndex = slides.length} 
+
+  for (i = 0; i < slides.length; i++) { 
+
+      slides[i].style.display = "none"; 
+
+  } 
+
+  for (i = 0; i < dots.length; i++) { 
+
+      dots[i].className = dots[i].className.replace(" active", ""); 
+
+  } 
+
+  slides[slideIndex-1].style.display = "block"; 
+
+  dots[slideIndex-1].className += " active"; 
+
+} 
+
+  
+
+</script> 
+
+</body> 
